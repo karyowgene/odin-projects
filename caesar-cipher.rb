@@ -1,5 +1,5 @@
 def caesar_cipher(string, shift)
-  alphabet = ('a'..'z').to_a
+  alphabet = ('a'..'z').to_a # turns the alphabet to an array
   ciphered_text = ""
 
   string.each_char do |char|
@@ -17,4 +17,9 @@ def caesar_cipher(string, shift)
 end
 
 # Example usage:
-puts caesar_cipher("Hello, World!", 3)  # "Khoor, Zruog!"
+puts "Example: 'Hello, world!' >> 'Khoor, Zruog!'"
+puts "In put your message:"
+new_message = gets.chomp
+puts caesar_cipher(new_message, 3) 
+
+# there is a bug in how repeated char first in caps is displayed in caps for non-cap similar char
